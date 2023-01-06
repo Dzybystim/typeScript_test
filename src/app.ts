@@ -1,15 +1,15 @@
+function merge<T extends object, U extends object> (objA: T , objB: U) {
+  return Object.assign(objA, objB);
+}
 
- class Key {
+class Component {
+  constructor (public props:T) {
 
- }
+  }
+}
 
-
-
-abstract class Plane {
-    door: boolean
-    key = new Key()
-
-    constructor (key: boolean) {
-        this.key = key;
-      }
+class Page extends Component {
+  pageInfo () {
+    console.log(this.props.title);
+  }
 }
